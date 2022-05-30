@@ -251,7 +251,7 @@ void ChessScene::onTouchesEnded(const std::vector<cocos2d::Touch*>& touch, cocos
                         auto duration = duration_cast<std::chrono::milliseconds>(stop - start);
                         std::cout << "At depth: " << i << " Processed moves: " << counter << " ";
                         std::cout << "Time spent: " << duration.count() << " ms ";
-                        std::cout << "Time per move: " << (int)(duration.count()*1000 / counter) << " microseconds ";
+                        std::cout << "Time per move: " << (int)(duration.count() * 1000 / counter) << " microseconds ";
                         std::cout << "Score: " << results.score << std::endl;
                         found = true;
                     }

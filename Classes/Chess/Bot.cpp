@@ -152,6 +152,10 @@ Results GetBestMove(Board& board, int depth, int& counter) {
             bestScore = score;
             best = pair.results;
             best.score = score;
+            filtered.empty();
+            filtered.push_back(pair.results);
+        } else if (score == bestScore) {
+            filtered.push_back(pair.results);
         }
     }
 
